@@ -9,7 +9,7 @@ app.use(bodyParser.json()); // To parse JSON data
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors({ origin: 'http://localhost:3000' }));
 app.use('/todos', TodoRoute);
-// app.use(express.static('public'))
+app.use(express.static('public'))
 app.use(express.json())
 
 
@@ -19,7 +19,7 @@ app.use(express.json())
 
 connect().then(()=>{
     app.listen(3000, ()=>{
-        console.log("Server started on http://localhost:3001")
+        console.log("Server started on http://localhost:3000")
     })
     }
     )
