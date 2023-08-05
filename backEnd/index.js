@@ -9,6 +9,7 @@ app.use(bodyParser.json()); // To parse JSON data
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors({ origin: 'http://localhost:3000' }));
 app.use('/todos', TodoRoute);
+app.use(cors())
 app.use(express.static('public'))
 app.use(express.json())
 
