@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const path = require('path')
 app.use(bodyParser.json()); // To parse JSON data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: 'http://localhost:3000' }));
+// app.use(cors({ origin: 'http://localhost:3000' }));
 app.use('/todos', TodoRoute);
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
